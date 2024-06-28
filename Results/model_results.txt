@@ -1,0 +1,87 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     ir   R-squared:                       0.187
+Model:                            OLS   Adj. R-squared:                  0.187
+Method:                 Least Squares   F-statistic:                 7.294e-14
+Date:                Wed, 19 Jun 2024   Prob (F-statistic):               1.00
+Time:                        12:31:44   Log-Likelihood:            -1.7372e+05
+No. Observations:               94311   AIC:                         3.475e+05
+Df Residuals:                   94289   BIC:                         3.477e+05
+Df Model:                          21                                         
+Covariance Type:              cluster                                         
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept      4.421e+11   9.83e+18    4.5e-08      1.000   -1.93e+19    1.93e+19
+TREATED          -0.0578   2.33e+04  -2.48e-06      1.000   -4.57e+04    4.57e+04
+sz_q1          1.894e+09      5e+16   3.79e-08      1.000    -9.8e+16     9.8e+16
+sz_q2          4.015e+08   3.33e+15    1.2e-07      1.000   -6.54e+15    6.54e+15
+sz_q3            1.3e+09        nan        nan        nan         nan         nan
+sz_q4         -7.315e+08        nan        nan        nan         nan         nan
+sz_q5          7.224e+06   1.07e+14   6.75e-08      1.000    -2.1e+14     2.1e+14
+sz_q6         -1.999e+09        nan        nan        nan         nan         nan
+sz_q7         -3.636e+08   8.58e+15  -4.24e-08      1.000   -1.68e+16    1.68e+16
+sz_q8         -7.239e+08   4.99e+15  -1.45e-07      1.000   -9.79e+15    9.79e+15
+sz_q9          1.531e+09        nan        nan        nan         nan         nan
+scope_q1      -6.968e+09   1.29e+17  -5.38e-08      1.000   -2.54e+17    2.54e+17
+scope_q2          0.0064   6599.950   9.73e-07      1.000   -1.29e+04    1.29e+04
+scope_q3      -6.968e+09   1.63e+17  -4.29e-08      1.000   -3.19e+17    3.19e+17
+scope_q4      -6.968e+09   1.57e+17  -4.45e-08      1.000   -3.07e+17    3.07e+17
+age_q1        -3.079e+09        nan        nan        nan         nan         nan
+age_q2        -3.473e+09   5.63e+16  -6.17e-08      1.000    -1.1e+17     1.1e+17
+age_q3         3.376e+08   4.32e+15   7.82e-08      1.000   -8.47e+15    8.47e+15
+age_q4         -1.22e+09   2.49e+16  -4.89e-08      1.000   -4.89e+16    4.89e+16
+age_q5         5.491e+08   8.41e+15   6.53e-08      1.000   -1.65e+16    1.65e+16
+age_q6          8.53e+08   8.66e+15   9.85e-08      1.000    -1.7e+16     1.7e+16
+age_q7         2.329e+08   3.81e+15   6.12e-08      1.000   -7.47e+15    7.47e+15
+age_q8                 0          0        nan        nan           0           0
+age_q9                 0          0        nan        nan           0           0
+firmsz_q0              0          0        nan        nan           0           0
+firmsz_q1              0          0        nan        nan           0           0
+firmsz_q2              0          0        nan        nan           0           0
+firmsz_q3              0          0        nan        nan           0           0
+firmsz_q4              0          0        nan        nan           0           0
+firmsz_q5              0          0        nan        nan           0           0
+firmsz_q6              0          0        nan        nan           0           0
+firmsz_q7              0          0        nan        nan           0           0
+firmsz_q8              0          0        nan        nan           0           0
+firmsz_q9              0          0        nan        nan           0           0
+firmage_q0             0          0        nan        nan           0           0
+firmage_q1             0          0        nan        nan           0           0
+firmage_q2             0          0        nan        nan           0           0
+firmage_q3             0          0        nan        nan           0           0
+firmage_q4             0          0        nan        nan           0           0
+firmage_q5             0          0        nan        nan           0           0
+firmage_q6             0          0        nan        nan           0           0
+firmage_q7             0          0        nan        nan           0           0
+firmage_q8             0          0        nan        nan           0           0
+firmage_q9             0          0        nan        nan           0           0
+year_dum_1994 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_1995 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_1996 -4.351e+11   5.27e+18  -8.26e-08      1.000   -1.03e+19    1.03e+19
+year_dum_1997 -4.351e+11   6.89e+18  -6.32e-08      1.000   -1.35e+19    1.35e+19
+year_dum_1998 -4.351e+11    6.5e+18   -6.7e-08      1.000   -1.27e+19    1.27e+19
+year_dum_1999 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2000 -4.351e+11   6.06e+18  -7.18e-08      1.000   -1.19e+19    1.19e+19
+year_dum_2001 -4.351e+11    2.5e+18  -1.74e-07      1.000    -4.9e+18     4.9e+18
+year_dum_2002 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2003 -4.351e+11   1.22e+18  -3.56e-07      1.000    -2.4e+18     2.4e+18
+year_dum_2004 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2005 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2006 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2007 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2008          0          0        nan        nan           0           0
+year_dum_2009 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2010 -4.351e+11        nan        nan        nan         nan         nan
+year_dum_2011 -4.351e+11        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                    23473.927   Durbin-Watson:                   0.569
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            82115.266
+Skew:                           1.235   Prob(JB):                         0.00
+Kurtosis:                       6.846   Cond. No.                     4.33e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The smallest eigenvalue is 1.08e-28. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
