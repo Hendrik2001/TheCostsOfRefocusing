@@ -1,0 +1,31 @@
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                     ir   R-squared:                        0.3573
+Estimator:                   PanelOLS   R-squared (Between):              0.4540
+No. Observations:               94311   R-squared (Within):               0.0915
+Date:                Sat, Jun 29 2024   R-squared (Overall):              0.3573
+Time:                        01:23:28   Log-likelihood                  -1.8e+05
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      8736.8
+Entities:                        1147   P-value                           0.0000
+Avg Obs:                       82.224   Distribution:                 F(6,94305)
+Min Obs:                       13.000                                           
+Max Obs:                       188.00   F-statistic (robust):             166.56
+                                        P-value                           0.0000
+Time periods:                     188   Distribution:                 F(6,94305)
+Avg Obs:                       501.65                                           
+Min Obs:                       56.000                                           
+Max Obs:                       1141.0                                           
+                                                                                
+                                Parameter Estimates                                
+===================================================================================
+                 Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-----------------------------------------------------------------------------------
+TREATED            -0.3551     0.1936    -1.8343     0.0666     -0.7345      0.0243
+TREATED_related    -0.4696     0.3730    -1.2590     0.2080     -1.2006      0.2614
+log_aum             0.1604     0.0071     22.511     0.0000      0.1464      0.1744
+log_age            -0.4574     0.0678    -6.7503     0.0000     -0.5901     -0.3246
+log_firmscope       0.0009     0.0735     0.0129     0.9897     -0.1432      0.1450
+log_firm_age       -0.0625     0.0795    -0.7867     0.4314     -0.2183      0.0932
+===================================================================================
+
