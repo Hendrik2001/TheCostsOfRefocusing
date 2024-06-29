@@ -1,35 +1,50 @@
 # Thesis Hendrik van den Broek Repository
-Welcome to the code that I have been using for my thesis.
-In this repo is a combination of results, data, python and stata. All of these files are explained further.
 
-File explanation:
-Folders:
-Factors folder -> consists of Factors used to create the information ratio
-Results folder -> General results and outputs
-Summary Statistics folder -> Contains summary statistics
-Table2 results folder -> Consists of results used to recreate table 2
-python files folder-> consists of seperate python files that mirror code output -> I have worked in jupyter notebooks so all of this code can also be found in the ipynb files
-    Order in which it should be run:
-      - makehfdata
-      - car36
-      - all_closures
-      - ret_corr_pairs
-      - ret_corr_big_ret_corr_integrate
-      - ret_corr_integrate2
-      - reg1
-      - closed_perf
-      - pscore
-      
-stata folder -> Contains the stata code used in the original research.
+Welcome to the repository for my thesis. This repository contains a combination of results, data, Python, and Stata code used throughout my research. Below is an explanation of the contents and structure of the repository.
 
+## Repository Structure
 
+### Folders
 
+- **Factors**: Contains factors used to create the information ratio.
+- **Results**: General results and outputs from the analysis.
+- **Summary Statistics**: Contains summary statistics.
+- **Table2 Results**: Includes results used to recreate Table 2.
+- **Python Files**: Consists of separate Python files that mirror code output. All of this code can also be found in the Jupyter notebooks. The order in which the files should be run is:
+  1. `makehfdata`
+  2. `car36`
+  3. `all_closures`
+  4. `ret_corr_pairs`
+  5. `ret_corr_big_ret_corr_integrate`
+  6. `ret_corr_integrate2`
+  7. `reg1`
+  8. `closed_perf`
+  9. `pscore`
 
-I have created this code in jupyter notebooks these are split in the following:
-Data Preparation.ipynb -> This is the largest file and contains all of the code used to create necessary variables and filters
-Regression.ipynb -> Contains the code that makes the first regressions used in Table 2
-Pscore&ClosedPerf.ipynb -> Contains code that creates Pscores
-CausalRegression.ipynb -> This code is the causal inference model and does not replicate any stata codes.
+- **Stata**: Contains the Stata code used in the original research.
+
+### Data
+
+- `merged_df.csv`: An AI-generated dataset that replicates properties of the Aurum dataset. Regression results and other outputs are meaningless when using this dataset, but it provides an idea of the inner workings of the code.
+
+### Jupyter Notebooks
+
+I originally wrote my code in Jupyter notebooks. These are split into the following:
+
+- **Data Preparation.ipynb**: This is the largest file and contains all of the code used to create necessary variables and filters.
+- **Regression.ipynb**: Contains the code that performs the first regressions used in Table 2.
+- **Pscore&ClosedPerf.ipynb**: Contains code that creates propensity scores.
+- **CausalRegression.ipynb**: This code implements the causal inference model and does not replicate any Stata codes.
+
+## Usage
+
+To replicate the analysis, follow the order of execution for the Python files listed above. Each folder and file is designed to build upon the previous steps, ensuring a comprehensive workflow from data preparation to final analysis.
+
+## Contact
+
+For any questions or further information, please contact me at [your email].
+
+Thank you for exploring my thesis repository!
 
 
 TODO:
