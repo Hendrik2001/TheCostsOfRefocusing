@@ -1,0 +1,4 @@
+Average Treatment Effect (ATE) Estimate:
+Point Estimate: -0.47890234013406807
+95% Confidence Interval: (-0.5329716491378723, -0.4248330311302638)
+The ATE is statistically significant at the 95% confidence level.
