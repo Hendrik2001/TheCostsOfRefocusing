@@ -26,6 +26,7 @@ Welcome to the repository for my thesis. This repository contains a combination 
 ### Data
 
 - `merged_df.csv`: An AI-generated dataset that replicates properties of the Aurum dataset. Regression results and other outputs are meaningless when using this dataset, but it provides an idea of the inner workings of the code.
+- `mydate_converter.csv`: Dataset that is used to convert the date format to the format used in the original research.
 
 ### Jupyter Notebooks
 
@@ -38,11 +39,11 @@ I originally wrote my code in Jupyter notebooks. These are split into the follow
 
 ## Usage
 
-To replicate the analysis, follow the order of execution for the Python files listed above. Each folder and file is designed to build upon the previous steps, ensuring a comprehensive workflow from data preparation to final analysis.
+To replicate the analysis, follow the order of execution for the Python files listed above. (I would recommend to just run the ipynb files.)
 
 ## Contact
 
-For any questions or further information, please contact me at [your email].
+For any questions or further information, please contact me at hendrikharrypaul@gmail.com.
 
 Thank you for exploring my thesis repository!
 
