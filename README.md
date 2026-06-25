@@ -1,44 +1,52 @@
-# Thesis Hendrik van den Broek Repository
+# The Costs of Refocusing
 
-Welcome to the repository for my thesis. This repository contains a combination of results, data, Python, and Stata code used throughout my research. Below is an explanation of the contents and structure of the repository.
+**Bachelor's Thesis — Causal Machine Learning on Institutional Hedge Fund Data**
 
-## Repository Structure
+An empirical study into the performance consequences of hedge funds refocusing their investment strategy, using causal inference methods on a proprietary institutional dataset spanning the entire hedge fund universe.
 
-### Folders
+## Research Question
 
-- **Factors**: Contains factors used to create the information ratio.
-- **Results**: General results and outputs from the analysis.
-- **Summary Statistics**: Contains summary statistics.
-- **Table2 Results**: Includes results used to recreate Table 2.
+When a hedge fund shifts its stated investment strategy — changing style, sector focus, or geographic mandate — does that refocusing *cause* worse performance, or do funds simply refocus *because* they are already underperforming? Disentangling causality from selection bias is the core challenge this thesis addresses.
 
-### Data
+## Approach
 
-- `merged_df.csv`: An AI-generated dataset that replicates properties of the Aurum dataset. Regression results and other outputs are meaningless when using this dataset, but it provides an idea of the inner workings of the code.
-- `mydate_converter.csv`: Dataset that is used to convert the date format to the format used in the original research.
+Naive regression on observational fund data is confounded: funds that refocus are not a random sample. This thesis applies a two-stage causal inference pipeline to recover unbiased treatment effects:
 
-### Jupyter Notebooks
+1. **Propensity Score Estimation** — models the probability of a fund refocusing given observable fund characteristics (AUM, age, past returns, strategy drift), used to control for selection into treatment
+2. **Difference-in-Differences (DiD)** — compares performance trajectories of refocusing vs. non-refocusing funds before and after the event, absorbing time-invariant fund heterogeneity
+3. **Causal Regression** — extends the DiD framework with doubly-robust estimation, combining the propensity model and outcome model to produce consistent estimates even if one is misspecified
 
-I originally wrote my code in Jupyter notebooks. These are split into the following:
+## Data
 
-- **Data Preparation.ipynb**: This is the largest file and contains all of the code used to create necessary variables and filters.
-- **Regression.ipynb**: Contains the code that performs the first regressions used in Table 2.
-- **Pscore&ClosedPerf.ipynb**: Contains code that creates propensity scores.
-- **CausalRegression.ipynb**: This code implements the causal inference model and does not replicate any Stata codes.
+The analysis uses the **Aurum hedge fund database** — a proprietary institutional dataset covering fund-level returns, AUM, strategy classifications, and fund lifecycle events across the full hedge fund universe. Due to data licensing restrictions, the repository includes a synthetic dataset that replicates the statistical properties of the original for code reproducibility.
 
-**When running this project run the ipynb files in the stated order.**
+## Key Files
 
-## Usage
+| Notebook | Purpose |
+|---|---|
+| `Data Preparation.ipynb` | Raw data cleaning, variable construction, fund-level filters, strategy classification |
+| `Regression.ipynb` | Baseline OLS regressions reproducing Table 2 results |
+| `Pscore&ClosedPerf.ipynb` | Propensity score estimation and closed-fund performance analysis |
+| `CausalRegression.ipynb` | Doubly-robust causal inference model — main contribution |
+| `RegressionDiD.ipynb` | Difference-in-Differences specification |
 
-To replicate the analysis, follow the order of execution for the Python files listed above. (I would recommend to just run the ipynb files.)
+Supporting outputs in `Factors/`, `Summary Statistics/`, and `TABLE2 Results/`.
 
-## Contact
+## Tech Stack
 
-For any questions or further information, please contact me at hendrikharrypaul@gmail.com.
+- Python (pandas, numpy, scikit-learn, statsmodels)
+- Jupyter Notebooks
+- Causal inference: propensity score matching, DiD, doubly-robust estimation
 
-Thank you for exploring my thesis repository!
+## Running the Code
 
+Execute notebooks in order:
 
-TODO:
-- Add log_firm_aum
-- Year fixed effects
-- 
+```
+1. Data Preparation.ipynb
+2. Regression.ipynb
+3. Pscore&ClosedPerf.ipynb
+4. CausalRegression.ipynb
+```
+
+The included synthetic dataset (`merged_df.csv`) allows the full pipeline to run — regression coefficients will not match the thesis results but the methodology is fully reproducible.
